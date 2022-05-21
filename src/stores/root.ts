@@ -413,6 +413,13 @@ export class RootStore {
 					spotPriceDestDenom: DenomHelper.ibcDenom([{ portId: 'transfer', channelId: 'channel-47' }], 'rowan'),
 					destCoinId: 'sifchain',
 				},
+				{
+					alternativeCoinId: 'pool:uevmos',
+					poolId: '720',
+					spotPriceSourceDenom: DenomHelper.ibcDenom([{ portId: 'transfer', channelId: 'channel-204' }], 'uevmos'),
+					spotPriceDestDenom: 'uosmo',
+					destCoinId: 'osmosis',
+				},
 			]
 		);
 
@@ -1886,6 +1893,21 @@ export class RootStore {
 						coinMinimalDenom: DenomHelper.ibcDenom([{ portId: 'transfer', channelId: 'channel-47' }], 'rowan'),
 						coinDenom: 'ROWAN',
 						coinDecimals: 18,
+					},
+				],
+			},
+			{
+				poolId: '720',
+				currencies: [
+					{
+						coinMinimalDenom: 'uosmo',
+						coinDenom: 'OSMO',
+						coinDecimals: 6,
+					},
+					{
+						coinMinimalDenom: DenomHelper.ibcDenom([{ portId: 'transfer', channelId: 'channel-204' }], 'uevmos'),
+						coinDenom: 'EVMOS',
+						coinDecimals: 6,
 					},
 				],
 			},
